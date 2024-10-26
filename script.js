@@ -32,3 +32,13 @@ window.onload = function() {
     const bestLife = document.getElementById('bestLife');
     bestLife.classList.add('animate');
   };
+
+  document.addEventListener("scroll", function() {
+    const subscribeSection = document.querySelector(".subscribe-section");
+    const sectionPosition = subscribeSection.getBoundingClientRect().top;
+    const screenPosition = window.innerHeight / 1.3;
+
+    if (sectionPosition < screenPosition) {
+      subscribeSection.classList.add("show");
+    }
+  });
